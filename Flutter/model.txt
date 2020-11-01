@@ -1,0 +1,25 @@
+class Server {
+  Server({this.popular, this.index, this.taglist, this.keyword});
+
+  Server.fromJson(Map<String, dynamic> json) {
+    popular = json['popular'];
+    index = json['index'];
+    taglist = json['taglist'];
+    keyword = json['keyword'];
+  }
+
+  String popular;
+  String index;
+  String taglist;
+  String keyword;
+  bool istick = false;
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['popular'] = popular;
+    data['index'] = index;
+    data['taglist'] = taglist;
+    data['keyword'] = keyword;
+    return data;
+  }
+}

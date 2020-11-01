@@ -1,0 +1,5 @@
+Navigator.pushNamedAndRemoveUntil(context, "/home", (route) => false);
+
+Navigator.push(context,MaterialPageRoute(builder: (context) => SecondRoute()));
+
+Navigator.pushNamed(context, "/login/resetPassword");
